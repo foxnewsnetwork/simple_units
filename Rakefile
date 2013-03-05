@@ -17,10 +17,10 @@ Jeweler::Tasks.new do |gem|
   gem.name = "simple_units"
   gem.homepage = "http://github.com/foxnewsnetwork/simple_units"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "tom@ioffer.com"
-  gem.authors = ["Thomas"]
+  gem.summary = %Q{Simple units implementation. Similar to ruby-units except with a lot less features and zero collisons with rails.}
+  gem.description = %Q{Sure, ruby is dynamic and that is one of its greatest strength. Object polymorphisms, duck typing, and the like is great in ruby, there is a time and place for everything. Sometimes, it just makes more sense to be strongly typed.}
+  gem.email = "foxnewsnetwork@gmail.com"
+  gem.authors = ["Thomas Chen"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -29,11 +29,6 @@ require 'rspec/core'
 require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:spec) do |spec|
   spec.pattern = FileList['spec/**/*_spec.rb']
-end
-
-RSpec::Core::RakeTask.new(:rcov) do |spec|
-  spec.pattern = 'spec/**/*_spec.rb'
-  spec.rcov = true
 end
 
 task :default => :spec
